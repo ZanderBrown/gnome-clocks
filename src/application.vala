@@ -111,6 +111,9 @@ public class Application : Gtk.Application {
         });
         update_theme (settings);
 
+        var icon_theme = Gtk.IconTheme.get_default ();
+        icon_theme.add_resource_path ("/org/gnome/clocks/icons/hicolor");
+
         set_accels_for_action ("win.new", { "<Primary>n" });
         set_accels_for_action ("win.select-all", { "<Primary>a" });
         set_accels_for_action ("win.show-primary-menu", { "F10" });

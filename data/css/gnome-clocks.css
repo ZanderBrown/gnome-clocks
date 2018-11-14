@@ -8,6 +8,13 @@ window > stack:backdrop {
     box-shadow: none;
 }
 
+/* stack switcher */
+
+stackswitcher button {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 /* content view */
 
 .tile {
@@ -128,24 +135,23 @@ window > stack:backdrop {
 }
 
 .clocks-secondary-standalone-label {
-    font-size: 18pt;
+    font-size: 12pt;
 }
 
 .clocks-button {
-    font-size: 14pt;
 }
 
 .clocks-alarm-setup-time {
-    font-size: 32pt;
+    font-size: 21pt;
 }
 
 .clocks-spinbutton {
-    font-size: 48pt;
+    font-size: 32pt;
 }
 
 .clocks-stopwatch-label,
 .clocks-timer-label {
-    font-size: 48pt;
+    font-size: 32pt;
 }
 
 .clocks-analog-frame.trough {
@@ -158,20 +164,6 @@ window > stack:backdrop {
 
 .clocks-analog-frame.progress-fast {
     color: @theme_fg_color;
-}
-
-.clocks-laps-panel:dir(ltr) {
-    border-image: linear-gradient(to bottom,
-                                  mix(@borders,@theme_bg_color,0.5),
-                                  mix(@borders,@theme_bg_color,0.5))
-                  0 0 0 1 / 20px 0px 20px 1px stretch;
-}
-
-.clocks-laps-panel:dir(rtl) {
-    border-image: linear-gradient(to bottom,
-                                  mix(@borders,@theme_bg_color,0.5),
-                                  mix(@borders,@theme_bg_color,0.5))
-                  0 1 0 0 / 20px 1px 20px 0px stretch;
 }
 
 .clocks-laps-panel list,

@@ -85,6 +85,11 @@ public class Window : Gtk.ApplicationWindow {
             });
         }
 
+        stack.child_set_property (world, "icon-name", "world-symbolic");
+        stack.child_set_property (alarm, "icon-name", "alarm-symbolic");
+        stack.child_set_property (stopwatch, "icon-name", "stopwatch-symbolic");
+        stack.child_set_property (timer, "icon-name", "timer-symbolic");
+
         stack_switcher.set_stack (stack);
 
         var stack_id = stack.notify["visible-child"].connect (() => {

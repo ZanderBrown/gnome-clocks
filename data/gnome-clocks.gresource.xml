@@ -5,6 +5,9 @@
     <file>css/gnome-clocks.highcontrast.css</file>
     <file preprocess="xml-stripblanks">gtk/menus.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file preprocess="xml-stripblanks">icons/hicolor/scalable/status/stopwatch-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/hicolor/scalable/status/timer-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/hicolor/scalable/status/world-symbolic.svg</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
     <file preprocess="xml-stripblanks">ui/worldlocationdialog.ui</file>
     <file preprocess="xml-stripblanks">ui/world.ui</file>

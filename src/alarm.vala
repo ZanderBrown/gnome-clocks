@@ -621,7 +621,8 @@ public class Face : Gtk.Stack, Clocks.Clock {
         });
 
         // Translators: "New" refers to an alarm
-        new_button = new Gtk.Button.with_label (C_("Alarm", "New"));
+        new_button = new Gtk.Button.from_icon_name ("list-add-symbolic");
+        new_button.tooltip_text = C_("Alarm", "New");
         new_button.valign = Gtk.Align.CENTER;
         new_button.no_show_all = true;
         new_button.action_name = "win.new";

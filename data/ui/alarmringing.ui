@@ -33,7 +33,8 @@
       <object class="GtkGrid" id="button_grid">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="column_spacing">24</property>
+        <property name="halign">center</property>
+        <property name="row_spacing">24</property>
         <child>
           <object class="GtkButton" id="stop_button">
             <property name="label" translatable="yes">Stop</property>
@@ -67,8 +68,8 @@
             </style>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
+            <property name="left_attach">0</property>
+            <property name="top_attach">1</property>
             <property name="width">1</property>
             <property name="height">1</property>
           </packing>

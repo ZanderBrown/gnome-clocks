@@ -306,7 +306,8 @@ public class ContentView : Gtk.Bin {
 
         flow_box = new Gtk.FlowBox ();
         flow_box.selection_mode = Gtk.SelectionMode.NONE;
-        flow_box.min_children_per_line = 3;
+        flow_box.halign = Gtk.Align.CENTER;
+        flow_box.min_children_per_line = 1;
 
         flow_box.child_activated.connect ((child) => {
             var item = model.get_item (child.get_index ()) as ContentItem;
@@ -552,7 +553,7 @@ public class AmPmToggleButton : Gtk.Button {
 
 public class AnalogFrame : Gtk.Bin {
     protected const int LINE_WIDTH = 6;
-    protected const int RADIUS_PAD = 48;
+    protected const int RADIUS_PAD = 24;
 
     private int calculate_diameter () {
         int ret = 2 * RADIUS_PAD;
