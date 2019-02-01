@@ -50,7 +50,8 @@ clocks_dependencies = [
   gnomedesktop,
   geocodeglib,
   libgeoclue,
-  math
+  math,
+  handy
 ]
 
 executable('gnome-clocks', clocks_sources,

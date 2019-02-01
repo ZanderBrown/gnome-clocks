@@ -81,6 +81,23 @@
             ]
         },
         {
+            "name" : "libhandy",
+            "buildsystem" : "meson",
+            "config-opts": [
+                "-Dglade_catalog=disabled"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://source.puri.sm/zbrown/libhandy.git",
+                    "branch" : "zbrown/switcher"
+                }
+            ],
+            "cleanup" : [
+                "/bin"
+            ]
+        },
+        {
             "name": "gnome-clocks",
             "buildsystem": "meson",
             "config-opts": [

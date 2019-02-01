@@ -37,7 +37,7 @@ public class Window : Gtk.ApplicationWindow {
     [GtkChild]
     private Gtk.Stack stack;
     [GtkChild]
-    private Gtk.StackSwitcher stack_switcher;
+    private Hdy.Switcher stack_switcher;
     [GtkChild]
     private Gtk.MenuButton menu_button;
     private GLib.Settings settings;
