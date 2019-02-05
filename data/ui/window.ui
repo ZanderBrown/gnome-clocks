@@ -28,8 +28,11 @@
           <class name="titlebar"/>
         </style>
         <child type="title">
-          <object class="HdySwitcher" id="stack_switcher">
+          <object class="HdyPrimarySwitcher" id="stack_switcher">
             <property name="visible">True</property>
+            <property name="secondary">secondary</property>
+            <property name="title" bind-source="ClocksWindow" bind-property="title" bind-flags="sync-create"/>
+            <property name="stack">stack</property>
           </object>
         </child>
         <child>
@@ -49,11 +52,34 @@
       </object>
     </child>
     <child>
-      <object class="GtkStack" id="stack">
+      <object class="GtkBox">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="vexpand">True</property>
-        <property name="hexpand">True</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkStack" id="stack">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="vexpand">True</property>
+            <property name="hexpand">True</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="HdySecondarySwitcher" id="secondary">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="stack">stack</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
       </object>
     </child>
   </template>

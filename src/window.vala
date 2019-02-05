@@ -37,7 +37,7 @@ public class Window : Gtk.ApplicationWindow {
     [GtkChild]
     private Gtk.Stack stack;
     [GtkChild]
-    private Hdy.Switcher stack_switcher;
+    private Hdy.PrimarySwitcher stack_switcher;
     [GtkChild]
     private Gtk.MenuButton menu_button;
     private GLib.Settings settings;
@@ -89,8 +89,6 @@ public class Window : Gtk.ApplicationWindow {
         stack.child_set_property (alarm, "icon-name", "alarm-symbolic");
         stack.child_set_property (stopwatch, "icon-name", "stopwatch-symbolic");
         stack.child_set_property (timer, "icon-name", "timer-symbolic");
-
-        stack_switcher.set_stack (stack);
 
         var stack_id = stack.notify["visible-child"].connect (() => {
             var help_overlay = get_help_overlay ();
